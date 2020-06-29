@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.breadcrumb-container{
+  margin: 0;
+  padding-inline-start: 0;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  text-align: left;
+}
+
+.breadcrumb{
+  display: inline-block;
+  margin-right: 7px;
+  color: #999;
+  font-size: 12px;
+  margin: $default_padding 0;
+  overflow: hidden;
+
+  i {
+    margin-right: 7px;
+    margin-left: 7px;
+    border: solid #cccccc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}

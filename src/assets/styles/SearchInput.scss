@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $primary_color;
+  padding: 10px 0;
+  z-index: 9999;
+  text-align: center;
+}
+
+.header > .container {
+  grid-template-columns: $default_padding $logo_header_width repeat(9, 1fr) $default_padding;
+  grid-template-rows: $logo_header_height;
+}
+
+.header-logo {
+  grid-column-start: 2;
+  text-align: left;
+}
+
+.search {
+  grid-column-start: 3;
+  grid-column-end: 12;
+
+  & > form > input {
+    height: $logo_header_height;
+    width: calc(100% - #{ $logo_header_height });
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+  }
+
+  & > form > button {
+    height: $logo_header_height;
+    width: $logo_header_height;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0;
+    background: no-repeat url("../images/ic_Search.png") $gray 50% 50%;
+
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($gray, 5%);
+    }
+
+    & > img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
