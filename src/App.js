@@ -4,7 +4,7 @@ import ProductsList from './views/ProductsList'
 import ProductShow from './views/ProductShow'
 import './assets/styles/App.scss';
 
-import {Search} from './components/searchInput'
+import {Search} from './components/SearchInput'
 
 function App() {
   let history = useHistory();
