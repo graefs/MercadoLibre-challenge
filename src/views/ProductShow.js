@@ -56,6 +56,6 @@ export default function ItemDetail(props) {
             <p className={'item-detail-description-text'}>{itemInfo.description}</p>
           </div>
         </div>
-      </div> : <p>Loader</p>
+      </div> : <p>Cargando</p>
   );
 };
